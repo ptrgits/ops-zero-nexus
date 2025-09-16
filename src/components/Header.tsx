@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
+import zerodayLogo from '@/assets/zeroday-logo.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,9 +24,11 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-              <div className="w-4 h-4 bg-background rounded-sm"></div>
-            </div>
+            <img 
+              src={zerodayLogo} 
+              alt="Zeroday101 Logo" 
+              className="w-10 h-10 rounded-full"
+            />
             <div>
               <div className="text-xl font-bold">Zeroday101</div>
               <div className="text-xs text-muted-foreground">Zeroday Operations</div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import zerodayLogo from '@/assets/zeroday-logo.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,9 +12,11 @@ const Footer = () => {
           {/* Logo & Description */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
-              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                <div className="w-4 h-4 bg-background rounded-sm"></div>
-              </div>
+              <img 
+                src={zerodayLogo} 
+                alt="Zeroday101 Logo" 
+                className="w-10 h-10 rounded-full"
+              />
               <div>
                 <div className="text-lg font-bold">Zeroday101</div>
                 <div className="text-xs text-muted-foreground">Part of Zeroday Operations</div>
