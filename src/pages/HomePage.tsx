@@ -9,23 +9,23 @@ const HomePage = () => {
   const features = [
     {
       icon: Shield,
-      title: "Real-World Focus",
-      description: "100% hands-on training dengan real application, bukan simulasi CTF"
+      title: "Pembelajaran Berbasis Praktik",
+      description: "100% hands-on training dengan aplikasi nyata dan skenario real-world, memberikan pengalaman langsung yang relevan dengan industri"
     },
     {
       icon: Award,
       title: "Mentor Berpengalaman", 
-      description: "Diajarkan oleh top ranker HackerOne dan CVE contributor aktif"
+      description: "Dibimbing langsung oleh praktisi aktif dengan rekam jejak internasional di platform bug bounty dan penelitian keamanan"
     },
     {
       icon: Users,
-      title: "Komunitas Alumni",
-      description: "Akses ke komunitas eksklusif dan kolaborasi program private"
+      title: "Komunitas Profesional",
+      description: "Bergabung dengan jaringan eksklusif alumni dan akses ke program kolaborasi dengan mentor berpengalaman"
     },
     {
       icon: Target,
-      title: "Career Ready",
-      description: "Didesain untuk menghasilkan pentester siap kerja dengan portofolio nyata"
+      title: "Siap Berkarir",
+      description: "Program dirancang khusus untuk menghasilkan profesional cybersecurity yang siap bekerja dengan portofolio yang solid"
     }
   ];
 
@@ -54,7 +54,7 @@ const HomePage = () => {
                   Bootcamp
                 </h1>
                 <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
-                  Bootcamp cybersecurity intensif selama <strong className="text-primary">10 bulan</strong> yang dirancang khusus untuk membentuk siswa menjadi peretas mahir dan peneliti kerentanan sistem
+                  Program cybersecurity intensif selama <strong className="text-primary">10 bulan</strong> yang dirancang khusus untuk membentuk profesional keamanan siber yang berkualitas tinggi dan ahli penelitian kerentanan sistem
                 </p>
               </div>
 
@@ -68,13 +68,14 @@ const HomePage = () => {
                 </Button>
               </div>
 
-              {/* Warning Message */}
-              <div className="bg-destructive/10 border border-destructive/20 rounded-lg p-6 max-w-2xl mx-auto">
-                <p className="text-destructive font-medium text-sm">
-                  BUKAN TEMPAT UNTUK MENJADI ARTIS
+              {/* Important Notice */}
+              <div className="bg-primary/10 border border-primary/30 rounded-lg p-6 max-w-2xl mx-auto">
+                <p className="text-primary font-semibold text-sm mb-2">
+                  Program Serius untuk Profesional Masa Depan
                 </p>
-                <p className="text-muted-foreground text-sm mt-2">
-                  Jika niat Anda hanya ingin cari tahu seperti apa belajar hacking atau hanya sekedar iseng, sebaiknya urungkan niat untuk mendaftar.
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Program ini dirancang khusus untuk individu yang memiliki komitmen serius dalam mengembangkan karir di bidang cybersecurity. 
+                  Kami mengutamakan kualitas pembelajaran dan keseriusan peserta dalam mencapai tujuan profesional.
                 </p>
               </div>
             </div>
@@ -107,8 +108,9 @@ const HomePage = () => {
                 Belajar dengan Benar Caranya Menjadi Hacker
               </h2>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Bagi kami, hacking bukan hanya soal sertifikat, mampu demo kontrol komputer orang, atau mampu terpampang di HoF sebagai bug hunter. 
-                <strong className="text-primary"> Hacking adalah gaya hidup</strong> yang meliputi bagaimana cara kita berfikir, menganalisa dan bertindak atas suatu keadaan atau tantangan.
+                Bagi kami, ethical hacking bukan sekadar mendapatkan sertifikat atau demonstrasi teknis semata. 
+                <strong className="text-primary"> Cybersecurity adalah filosofi hidup</strong> yang mencakup cara berpikir analitis, 
+                pendekatan metodis dalam pemecahan masalah, dan tindakan yang bertanggung jawab dalam menghadapi tantangan keamanan digital.
               </p>
             </div>
           </div>
@@ -119,10 +121,10 @@ const HomePage = () => {
           <div className="container mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Apa yang Membuat Kami Berbeda?
+                Metodologi Pembelajaran Profesional
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Program yang didesain untuk menghasilkan ethical hacker profesional dengan pendekatan real-world
+                Program yang dirancang untuk menghasilkan ethical hacker profesional dengan pendekatan pembelajaran berbasis praktik nyata
               </p>
             </div>
 
@@ -153,7 +155,7 @@ const HomePage = () => {
           <div className="container mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Apa yang Akan Anda Pelajari?
+                Spesialisasi Pembelajaran
               </h2>
             </div>
 
@@ -203,7 +205,7 @@ const HomePage = () => {
               Siap Memulai Perjalanan Anda?
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Jangan sia-siakan kesempatan untuk menjadi cybersecurity professional. Konsultasi dengan tim kami dan mulai transformasi karir Anda hari ini.
+              Bergabunglah dengan program transformasi karir yang komprehensif. Konsultasikan tujuan profesional Anda dengan tim ahli kami dan mulai perjalanan menuju keahlian cybersecurity tingkat internasional.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8 py-4 h-auto">

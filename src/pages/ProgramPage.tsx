@@ -9,65 +9,65 @@ const ProgramPage = () => {
   const programHighlights = [
     {
       icon: Clock,
-      title: "10 Bulan Intensif",
-      description: "5 hari per minggu, libur weekend untuk fokus maksimal"
+      title: "Program Intensif 10 Bulan",
+      description: "Pembelajaran terstruktur 5 hari per minggu dengan jadwal yang memungkinkan keseimbangan belajar yang optimal"
     },
     {
       icon: Users,
-      title: "Mentor Berpengalaman",
-      description: "Praktisi aktif dunia internasional dengan track record terbukti"
+      title: "Mentor Berkualitas Internasional",
+      description: "Dibimbing langsung oleh praktisi aktif dengan pengalaman dan pengakuan di tingkat global"
     },
     {
       icon: Award,
-      title: "Sertifikat Resmi",
-      description: "Zeroday Operations verifiable dengan standar industri"
+      title: "Sertifikasi Profesional",
+      description: "Sertifikat Zeroday Operations yang dapat diverifikasi dan diakui dalam industri cybersecurity"
     },
     {
       icon: Target,
-      title: "Real-World Focus",
-      description: "100% hands-on dengan aplikasi nyata, bukan simulasi"
+      title: "Pendekatan Praktis",
+      description: "100% pembelajaran berbasis praktik langsung dengan aplikasi dan sistem nyata di lingkungan profesional"
     }
   ];
 
   const targetAudience = [
     {
-      title: "Siswa / Mahasiswa",
-      description: "Yang ingin menjadi pentester profesional dan membangun karir di bidang cybersecurity",
-      tag: "Fresh graduates welcome"
+      title: "Mahasiswa & Fresh Graduate",
+      description: "Individu yang ingin membangun karir profesional di bidang cybersecurity dengan foundation yang kuat",
+      tag: "Selamat datang fresh graduates"
     },
     {
-      title: "Profesional TI",
-      description: "Yang ingin alih jalur ke bidang cybersecurity dengan skill yang marketable",
-      tag: "Career transition"
+      title: "Profesional IT",
+      description: "Profesional teknologi yang tertarik untuk mengembangkan keahlian khusus di bidang keamanan siber",
+      tag: "Transisi karir yang tepat"
     },
     {
-      title: "Freelancer / Remote Worker",
-      description: "Yang ingin mendapatkan penghasilan dari platform bug bounty global",
-      tag: "Global opportunities"
+      title: "Freelancer & Remote Worker",
+      description: "Individu yang ingin mengembangkan keahlian untuk berpartisipasi dalam platform bug bounty internasional",
+      tag: "Peluang global tersedia"
     },
     {
-      title: "Aspiring Bug Hunter",
-      description: "Siapa pun yang serius ingin menjadi bughunter profesional dengan income yang stabil",
-      tag: "Professional mindset"
+      title: "Calon Peneliti Keamanan",
+      description: "Individu yang memiliki minat serius dalam menjadi bug hunter profesional dengan pendapatan yang stabil",
+      tag: "Mindset profesional diperlukan"
     }
   ];
 
   const requirements = [
-    "Serius ingin berkarir di cybersecurity",
-    "Siap belajar intensif 5 hari/minggu",
-    "Memiliki growth mindset yang kuat",
-    "Tidak mudah menyerah dan gigih",
-    "Tidak butuh gelar tinggi — yang dibutuhkan kemauan dan kerja keras"
+    "Komitmen serius untuk mengembangkan karir di bidang cybersecurity",
+    "Kesediaan untuk belajar intensif dengan jadwal 5 hari per minggu",
+    "Memiliki growth mindset dan kemauan untuk terus berkembang",
+    "Dedikasi tinggi dan ketekunan dalam menghadapi tantangan pembelajaran",
+    "Motivasi intrinsik untuk menguasai keahlian technical yang mendalam"
   ];
 
   const outputs = [
-    "Sertifikat Zeroday Operations Pvt (verifiable)",
-    "Portofolio report bug valid (untuk melamar kerja)",
-    "Penguasaan membuat exploitation tools dengan Python, Perl, dan lainnya",
-    "Akses ke komunitas tertutup alumni",
-    "Pembimbingan lanjutan setelah lulus",
-    "Kolaborasi pada private program di semua platform (Bugcrowd, HackerOne, dll)",
-    "Akses diskusi langsung ke opzero.ru (dengan prosedur ketat)"
+    "Sertifikat Zeroday Operations Pvt yang dapat diverifikasi secara resmi",
+    "Portfolio laporan kerentanan yang valid untuk keperluan aplikasi kerja",
+    "Kemampuan mengembangkan tools eksploitasi menggunakan Python, Perl, dan bahasa lainnya",
+    "Akses eksklusif ke komunitas alumni yang terpercaya",
+    "Bimbingan berkelanjutan dari mentor setelah menyelesaikan program",
+    "Kesempatan kolaborasi dalam program private di platform internasional",
+    "Akses terbatas ke diskusi teknis advanced melalui jalur resmi"
   ];
 
   return (
@@ -156,9 +156,10 @@ const ProgramPage = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
               {/* Requirements */}
               <div>
-                <h2 className="text-3xl font-bold mb-8">Persyaratan Penting</h2>
+                <h2 className="text-3xl font-bold mb-8">Komitmen yang Diperlukan</h2>
                 <p className="text-muted-foreground mb-6">
-                  Program ini membutuhkan komitmen tinggi dan dedikasi penuh. Hanya untuk mereka yang:
+                  Program ini dirancang untuk individu yang memiliki dedikasi tinggi dalam pengembangan karir profesional. 
+                  Kami mencari peserta yang memiliki karakteristik berikut:
                 </p>
                 <div className="space-y-4">
                   {requirements.map((req, index) => (
@@ -172,7 +173,7 @@ const ProgramPage = () => {
 
               {/* Output */}
               <div>
-                <h2 className="text-3xl font-bold mb-8">Output Setelah Lulus</h2>
+                <h2 className="text-3xl font-bold mb-8">Hasil Pembelajaran</h2>
                 <div className="space-y-4">
                   {outputs.map((output, index) => (
                     <div key={index} className="flex items-start space-x-3">
@@ -193,14 +194,14 @@ const ProgramPage = () => {
               <Card className="luxury-card bg-primary/5 border-primary/20">
                 <CardContent className="p-8 text-center">
                   <h2 className="text-2xl md:text-3xl font-bold mb-4">
-                    Filosofi Kami
+                    Filosofi Program Kami
                   </h2>
                   <blockquote className="text-lg italic text-muted-foreground leading-relaxed">
-                    "Hacking adalah gaya hidup yang meliputi bagaimana cara kita berfikir, menganalisa dan bertindak atas suatu keadaan atau tantangan."
+                    "Cybersecurity adalah filosofi hidup yang mencakup cara berpikir analitis, pendekatan metodis dalam pemecahan masalah, dan tindakan yang bertanggung jawab dalam menghadapi tantangan keamanan digital."
                   </blockquote>
                   <div className="mt-6">
                     <p className="text-sm text-muted-foreground">
-                      Bagi kami, hacking bukan hanya soal sertifikat atau demo. Ini adalah mindset profesional yang akan mengubah cara Anda memandang teknologi dan keamanan.
+                      Bagi kami, ethical hacking bukan sekadar sertifikasi atau demonstrasi teknis. Ini adalah mindset profesional yang akan mengubah perspektif Anda tentang teknologi dan keamanan informasi.
                     </p>
                   </div>
                 </CardContent>

@@ -23,8 +23,8 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-md">
-              Bootcamp cybersecurity intensif untuk membentuk ethical hacker dan peneliti keamanan profesional.
-              Hacking adalah gaya hidup yang meliputi bagaimana cara kita berfikir, menganalisa dan bertindak.
+              Program cybersecurity intensif untuk membentuk profesional keamanan siber dan peneliti keamanan tingkat internasional.
+              Ethical hacking adalah filosofi hidup yang mencakup cara berpikir analitis dan pendekatan metodis dalam keamanan digital.
             </p>
           </div>
 
@@ -72,7 +72,7 @@ const Footer = () => {
             © {currentYear} Zeroday Operations. All rights reserved. Part of operation opzero.ru
           </div>
           <div className="text-sm text-muted-foreground mt-4 md:mt-0">
-            Train Hard, Hack Real. #RealWorldPentest #BugBounty
+            Excellence in Cybersecurity Education. Professional Development Through Practice.
           </div>
         </div>
       </div>
