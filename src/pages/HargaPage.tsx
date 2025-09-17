@@ -153,7 +153,11 @@ const HargaPage = () => {
                   </div>
 
                   <div className="pt-6 border-t border-border">
-                    <Button size="lg" className="w-full bg-primary hover:bg-primary/90 text-lg py-4">
+                    <Button 
+                      size="lg" 
+                      className="w-full bg-primary hover:bg-primary/90 text-lg py-4"
+                      onClick={() => setIsRegistrationOpen(true)}
+                    >
                       Hubungi Kami untuk Informasi Harga
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </Button>
@@ -201,7 +205,7 @@ const HargaPage = () => {
                     <Button 
                       variant={index === 1 ? "default" : "outline"} 
                       className="w-full"
-                      onClick={() => index === 1 ? setIsRegistrationOpen(true) : undefined}
+                      onClick={() => setIsRegistrationOpen(true)}
                     >
                       {index === 1 ? "Daftar Early Bird" : "Konsultasi Gratis"}
                     </Button>
@@ -264,7 +268,11 @@ const HargaPage = () => {
                       Daftar Sekarang
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </Button>
-                    <Button variant="outline" size="lg">
+                    <Button 
+                      variant="outline" 
+                      size="lg"
+                      onClick={() => setIsRegistrationOpen(true)}
+                    >
                       Konsultasi Terlebih Dahulu
                     </Button>
                   </div>
