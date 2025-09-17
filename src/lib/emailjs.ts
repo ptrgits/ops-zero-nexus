@@ -1,9 +1,9 @@
 import emailjs from 'emailjs-com';
 
 // Konfigurasi EmailJS
-const EMAILJS_SERVICE_ID = 'service_zeroday101'; // Ganti dengan Service ID Anda
-const EMAILJS_TEMPLATE_ID = 'template_registration'; // Ganti dengan Template ID Anda
-const EMAILJS_PUBLIC_KEY = 'your_public_key_here'; // Ganti dengan Public Key Anda
+const EMAILJS_SERVICE_ID = 'service_bxqcf9f'; // Ganti dengan Service ID Anda
+const EMAILJS_TEMPLATE_ID = 'template_yitys0f'; // Ganti dengan Template ID Anda
+const EMAILJS_PUBLIC_KEY = 'b8vAUvcPDduL4Mwxj'; // Ganti dengan Public Key Anda
 
 export interface RegistrationData {
   fullName: string;
