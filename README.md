@@ -59,6 +59,7 @@ This project is built with:
 - React
 - shadcn-ui
 - Tailwind CSS
+- EmailJS (for form submissions)
 
 ## How can I deploy this project?
 
@@ -71,3 +72,17 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+
+## Email Configuration
+
+The registration form uses EmailJS to send emails. To set it up:
+
+1. Create an account at https://www.emailjs.com/
+2. Create an email service (Gmail, Outlook, or SMTP)
+3. Create email templates as described in `src/lib/email-templates.md`
+4. Update the configuration in `src/lib/emailjs.ts` with your:
+   - Service ID
+   - Template IDs
+   - Public Key
+
+The form will send emails to `pendaftaran@opzero.id` when someone submits a registration.

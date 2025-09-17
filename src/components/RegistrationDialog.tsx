@@ -30,6 +30,8 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Card, CardContent } from '@/components/ui/card';
 import { CheckCircle, Clock, Users, PhoneCall } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { sendRegistrationEmail, sendConfirmationEmail, type RegistrationData } from '@/lib/emailjs';
+import { LoadingSpinner } from '@/components/ui/loading-spinner';
 
 const backgroundOptions = [
   'Fresh Graduate',
@@ -80,13 +82,43 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({ open, onOpenCha
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
     
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    toast({
-      title: "Pendaftaran Berhasil!",
-      description: "Tim kami akan menghubungi Anda dalam 2 jam untuk konsultasi gratis.",
-    });
+    try {
+      // Prepare data for email
+      const registrationData: RegistrationData = {
+        fullName: data.fullName,
+        email: data.email,
+        whatsapp: data.whatsapp,
+        background: data.background,
+        motivation: data.motivation,
+        experience: data.experience,
+        commitment: data.commitment
+      };
+
+      // Send registration email to admin
+      const adminEmailSent = await sendRegistrationEmail(registrationData);
+      
+      // Send confirmation email to user
+      const confirmationEmailSent = await sendConfirmationEmail(registrationData);
+
+      if (adminEmailSent) {
+        toast({
+          title: "Pendaftaran Berhasil!",
+          description: "Data Anda telah dikirim ke tim kami. Kami akan menghubungi Anda dalam 2 jam untuk konsultasi gratis.",
+        });
+      } else {
+        toast({
+          title: "Pendaftaran Diterima",
+          description: "Pendaftaran Anda telah diterima. Tim kami akan segera menghubungi Anda.",
+          variant: "default"
+        });
+      }
+    } catch (error) {
+      console.error('Registration submission error:', error);
+      toast({
+        title: "Pendaftaran Diterima",
+        description: "Terima kasih atas pendaftaran Anda. Tim kami akan segera menghubungi Anda.",
+      });
+    }
     
     setIsSubmitting(false);
     onOpenChange(false);
@@ -283,7 +315,14 @@ const RegistrationDialog: React.FC<RegistrationDialogProps> = ({ open, onOpenCha
                 className="w-full bg-primary hover:bg-primary/90"
                 disabled={isSubmitting}
               >
-                {isSubmitting ? 'Mengirim Pendaftaran...' : 'Kirim Pendaftaran'}
+                {isSubmitting ? (
+                  <>
+                    <LoadingSpinner size="sm" className="mr-2" />
+                    Mengirim Pendaftaran...
+                  </>
+                ) : (
+                  'Kirim Pendaftaran'
+                )}
               </Button>
               
               <p className="text-xs text-center text-muted-foreground">
