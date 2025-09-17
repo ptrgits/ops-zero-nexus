@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Check, ArrowRight, DollarSign, Calendar, Award } from 'lucide-react';
+import RegistrationDialog from '@/components/RegistrationDialog';
 
 const HargaPage = () => {
+  const [isRegistrationOpen, setIsRegistrationOpen] = useState(false);
   const includedFeatures = [
     "10 bulan pelatihan intensif (5 hari/minggu)",
     "Akses ke lab internal dan target aplikasi real", 
@@ -196,7 +198,11 @@ const HargaPage = () => {
                         </div>
                       ))}
                     </div>
-                    <Button variant={index === 1 ? "default" : "outline"} className="w-full">
+                    <Button 
+                      variant={index === 1 ? "default" : "outline"} 
+                      className="w-full"
+                      onClick={() => index === 1 ? setIsRegistrationOpen(true) : undefined}
+                    >
                       {index === 1 ? "Daftar Early Bird" : "Konsultasi Gratis"}
                     </Button>
                   </CardContent>
@@ -250,7 +256,11 @@ const HargaPage = () => {
                     Daftar sekarang dan dapatkan akses ke tools premium serta bonus mentoring session!
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Button size="lg" className="bg-primary hover:bg-primary/90">
+                    <Button 
+                      size="lg" 
+                      className="bg-primary hover:bg-primary/90"
+                      onClick={() => setIsRegistrationOpen(true)}
+                    >
                       Daftar Sekarang
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </Button>
@@ -269,6 +279,11 @@ const HargaPage = () => {
       </main>
 
       <Footer />
+      
+      <RegistrationDialog 
+        open={isRegistrationOpen} 
+        onOpenChange={setIsRegistrationOpen} 
+      />
     </div>
   );
 };

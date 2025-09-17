@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { ArrowRight, Shield, Award, Users, Target } from 'lucide-react';
+import RegistrationDialog from '@/components/RegistrationDialog';
 
 const HomePage = () => {
+  const [isRegistrationOpen, setIsRegistrationOpen] = useState(false);
   const features = [
     {
       icon: Shield,
@@ -59,7 +61,11 @@ const HomePage = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8 py-4 h-auto">
+                <Button 
+                  size="lg" 
+                  className="bg-primary hover:bg-primary/90 text-lg px-8 py-4 h-auto"
+                  onClick={() => setIsRegistrationOpen(true)}
+                >
                   Daftar Sekarang
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
@@ -221,6 +227,11 @@ const HomePage = () => {
       </main>
 
       <Footer />
+      
+      <RegistrationDialog 
+        open={isRegistrationOpen} 
+        onOpenChange={setIsRegistrationOpen} 
+      />
     </div>
   );
 };

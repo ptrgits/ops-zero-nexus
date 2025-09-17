@@ -3,9 +3,11 @@ import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import zerodayLogo from '@/assets/zeroday-logo.png';
+import RegistrationDialog from './RegistrationDialog';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isRegistrationOpen, setIsRegistrationOpen] = useState(false);
   const location = useLocation();
 
   const navigation = [
@@ -57,7 +59,11 @@ const Header = () => {
             <Button variant="outline" size="sm">
               Login
             </Button>
-            <Button size="sm" className="bg-primary hover:bg-primary/90">
+            <Button 
+              size="sm" 
+              className="bg-primary hover:bg-primary/90"
+              onClick={() => setIsRegistrationOpen(true)}
+            >
               Daftar Sekarang
             </Button>
           </div>
@@ -94,13 +100,22 @@ const Header = () => {
               <Button variant="outline" size="sm" className="w-full mb-2">
                 Login
               </Button>
-              <Button size="sm" className="w-full bg-primary hover:bg-primary/90">
+              <Button 
+                size="sm" 
+                className="w-full bg-primary hover:bg-primary/90"
+                onClick={() => setIsRegistrationOpen(true)}
+              >
                 Daftar Sekarang
               </Button>
             </div>
           </div>
         )}
       </div>
+      
+      <RegistrationDialog 
+        open={isRegistrationOpen} 
+        onOpenChange={setIsRegistrationOpen} 
+      />
     </header>
   );
 };
