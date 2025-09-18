@@ -9,6 +9,8 @@ import KurikulumPage from "./pages/KurikulumPage";
 import MentorPage from "./pages/MentorPage";
 import HargaPage from "./pages/HargaPage";
 import KontakPage from "./pages/KontakPage";
+import PaymentPage from "./pages/PaymentPage";
+import PaymentSuccessPage from "./pages/PaymentSuccessPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +28,8 @@ const App = () => (
           <Route path="/mentor" element={<MentorPage />} />
           <Route path="/harga" element={<HargaPage />} />
           <Route path="/kontak" element={<KontakPage />} />
+          <Route path="/payment" element={<PaymentPage />} />
+          <Route path="/payment-success" element={<PaymentSuccessPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

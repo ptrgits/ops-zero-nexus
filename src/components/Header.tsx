@@ -56,8 +56,17 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
-            <Button variant="outline" size="sm">
-              Login
+            <Button 
+              variant="outline" 
+              size="sm"
+              onClick={() => window.location.href = '/payment'}
+            <Button 
+              variant="outline" 
+              size="sm" 
+              className="w-full mb-2"
+              onClick={() => window.location.href = '/payment'}
+            >
+              Exclusive
             </Button>
             <Button 
               size="sm" 

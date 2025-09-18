@@ -86,3 +86,37 @@ The registration form uses EmailJS to send emails. To set it up:
    - Public Key
 
 The form will send emails to `pendaftaran@opzero.id` when someone submits a registration.
+
+## Payment System
+
+The application includes a Stripe-based payment system for the exclusive bootcamp program.
+
+### Payment Features
+
+- **Exclusive Payment Page**: Professional payment interface with package details
+- **Stripe Integration**: Secure payment processing (requires setup)
+- **Automatic Invoicing**: 
+  - Customer invoice sent to buyer's email
+  - Admin invoice sent to `invoice@opzero.id`
+- **Payment Success Page**: Confirmation and next steps
+
+### Payment Setup
+
+1. Create a Stripe account at https://stripe.com/
+2. Get your publishable and secret keys from the Stripe dashboard
+3. Create additional EmailJS templates for invoices:
+   - `template_customer_invoice` - for customer receipts
+   - `template_admin_invoice` - for admin notifications
+4. Update environment variables:
+   ```
+   VITE_STRIPE_PUBLISHABLE_KEY=pk_test_your_key
+   STRIPE_SECRET_KEY=sk_test_your_key
+   ```
+
+### Payment Flow
+
+1. User clicks "Exclusive" button in header
+2. Redirected to `/payment` page with package details
+3. User fills payment form and processes payment
+4. System sends invoices to both customer and admin
+5. User redirected to success page
